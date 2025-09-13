@@ -13,7 +13,8 @@
                 <button type = "button" (click)="MultiplyValues()">Divid values</button>
             </div>
         </form>
-        <div class="result-display">
+      
+        <div class="result-display" *ngIf="result">
             <p>Resultado: <span id="result">{{result}}</span></p>
         </div>
     </div>
