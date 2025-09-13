@@ -58,6 +58,14 @@ button:hover{
     font-size: 20px;
     color: black;
 }
+.interactionButtons{
+    display: flex;
+    flex-direction: column; /* Itens um abaixo do outro */
+    align-items: center;    /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente dentro do container */
+    gap: 16px;              /* Espaçamento entre os itens */
+    padding: 10%;           /* Espaçamento interno do container */
+}
 #result{
     font-weight: bold;
 }
