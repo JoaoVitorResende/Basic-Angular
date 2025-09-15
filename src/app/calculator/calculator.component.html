@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="form-box">
+        <form #form="ngForm" (ngSubmit)="SumValues()">
+            <h2>Calculadora</h2>
+            <label> Numero 1</label>
+            <input type="number" name="num1" id ="num1" [(ngModel)]="num1"/>
+            <label> Numero 2</label>
+            <input type="number" name="num2" id ="num2" [(ngModel)]="num2"/>
+            <div class="interactionButtons">
+                <button type = "submit">Sum values</button>
+                <button type = "button" (click)="SubtractValues()">Subtract values</button>
+                <button type = "button" (click)="DividValues()">Divid values</button>
+                <button type = "button" (click)="MultiplyValues()">Divid values</button>
+            </div>
+        </form>
+      
+        <div class="result-display" *ngIf="result">
+            <p>Resultado: <span id="result">{{result}}</span></p>
+        </div>
+    </div>
+</div>

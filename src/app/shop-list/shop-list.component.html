@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Lista de compras</h1>
+    <form #form="ngForm" (ngSubmit)="AddToShopList()" class="addItemForm">
+        <input type="text" name="input" id="item" [(ngModel)]="item" placeholder="Digite o nome do item">
+        <button type="submit">Adicionar</button>
+        <button type="button" (click) = "CleanShopList()">Limpar</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>item</th>
+                <th>item</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let element of list">
+                <td>{{element.id}}</td>
+                <td>
+                    <span [ngClass]="{'scratched-item': element.bought}">{{element.name}}</span>
+                </td>
+                <td>
+                    <input type="checkbox" (click)="ScratchedItem(element)" [checked]="element.bought">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
