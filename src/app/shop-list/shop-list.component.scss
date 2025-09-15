@@ -41,7 +41,7 @@ input:focus {
     border-color: dodgerblue;
 }
 
-button {
+button[type = "submit"] {
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
@@ -51,9 +51,21 @@ button {
     cursor: pointer;
     transition: backgroun 0.3s;
 }
-
+button[type = "button"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: darksalmon;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: backgroun 0.3s;
+}
 button:hover {
     background: royalblue;
+}
+button[type="button"]:hover {
+    background: #FA8072;
 }
 
 table {
@@ -88,4 +100,7 @@ tr:nth-child(even) {
 input[type="checkbox"] {
     transform: scale(1.2);
     cursor: pointer;
+}
+.scratched-item{
+    text-decoration: line-through;
 }
